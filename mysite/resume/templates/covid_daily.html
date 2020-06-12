@@ -1,0 +1,1562 @@
+{% extends "gallery.html" %}
+{% load static %}
+{% block content %}
+
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0057b26096864d549acae70df6baa096 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_0057b26096864d549acae70df6baa096" ></div>
+        
+</body>
+<script>    
+    
+            var map_0057b26096864d549acae70df6baa096 = L.map(
+                "map_0057b26096864d549acae70df6baa096",
+                {
+                    center: [32.8304, -96.9238],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f6def8602b054bc4b9a09fcd14bc41bf = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+                var lat_lng_popup_a94c3ae11cf545ebae4297bee2e57b15 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_a94c3ae11cf545ebae4297bee2e57b15
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_0057b26096864d549acae70df6baa096);
+                    }
+                map_0057b26096864d549acae70df6baa096.on('click', latLngPop);
+            
+    
+            var marker_bd69190fc4ba4f599d20ecfa2d151c3c = L.marker(
+                [29.8345, -95.4355],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_8874fd6e1c5f48988ab6a564174ca8bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9bd4627a16024c6b97be66338d0f781f = $(`<div id="html_9bd4627a16024c6b97be66338d0f781f" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Harris County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>10770.0</td>         <td>219.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_8874fd6e1c5f48988ab6a564174ca8bc.setContent(html_9bd4627a16024c6b97be66338d0f781f);
+        
+
+        marker_bd69190fc4ba4f599d20ecfa2d151c3c.bindPopup(popup_8874fd6e1c5f48988ab6a564174ca8bc)
+        ;
+
+        
+    
+    
+            marker_bd69190fc4ba4f599d20ecfa2d151c3c.bindTooltip(
+                `<div>
+                         <b>Harris County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aa584ecdd73741f9a9c25e6e692ab11d = L.marker(
+                [32.767, -96.7775],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_c371432ffb6d4a64813e48b03d388c1e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c357d0f09a24fd693a4e54ad92c2b3b = $(`<div id="html_1c357d0f09a24fd693a4e54ad92c2b3b" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Dallas County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>8649.0</td>         <td>210.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_c371432ffb6d4a64813e48b03d388c1e.setContent(html_1c357d0f09a24fd693a4e54ad92c2b3b);
+        
+
+        marker_aa584ecdd73741f9a9c25e6e692ab11d.bindPopup(popup_c371432ffb6d4a64813e48b03d388c1e)
+        ;
+
+        
+    
+    
+            marker_aa584ecdd73741f9a9c25e6e692ab11d.bindTooltip(
+                `<div>
+                         <b>Dallas County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7640e58abfce446baae9d9447d3d95f6 = L.marker(
+                [32.7715, -97.2915],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_61cbf5a8b9b840a7b6b0274107f87ce9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_24a344b084614f21a1eea482654bbecc = $(`<div id="html_24a344b084614f21a1eea482654bbecc" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Tarrant County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>4951.0</td>         <td>143.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_61cbf5a8b9b840a7b6b0274107f87ce9.setContent(html_24a344b084614f21a1eea482654bbecc);
+        
+
+        marker_7640e58abfce446baae9d9447d3d95f6.bindPopup(popup_61cbf5a8b9b840a7b6b0274107f87ce9)
+        ;
+
+        
+    
+    
+            marker_7640e58abfce446baae9d9447d3d95f6.bindTooltip(
+                `<div>
+                         <b>Tarrant County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3999e65724b84b6cbe1df7734f690381 = L.marker(
+                [30.326, -97.7715],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_793b6bf45cba469cbb6ecb3b44793f45 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_40e32480840e443086ea449e7669fea9 = $(`<div id="html_40e32480840e443086ea449e7669fea9" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Travis County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>2788.0</td>         <td>83.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_793b6bf45cba469cbb6ecb3b44793f45.setContent(html_40e32480840e443086ea449e7669fea9);
+        
+
+        marker_3999e65724b84b6cbe1df7734f690381.bindPopup(popup_793b6bf45cba469cbb6ecb3b44793f45)
+        ;
+
+        
+    
+    
+            marker_3999e65724b84b6cbe1df7734f690381.bindTooltip(
+                `<div>
+                         <b>Travis County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f7244a436834a2d95e50ad952ceaf0d = L.marker(
+                [29.4375, -98.464],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_5c462ac03c884e40839aa3e985dacd6a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a7e4a669df9437785b6414e8ec84839 = $(`<div id="html_6a7e4a669df9437785b6414e8ec84839" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Bexar County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>2418.0</td>         <td>66.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_5c462ac03c884e40839aa3e985dacd6a.setContent(html_6a7e4a669df9437785b6414e8ec84839);
+        
+
+        marker_2f7244a436834a2d95e50ad952ceaf0d.bindPopup(popup_5c462ac03c884e40839aa3e985dacd6a)
+        ;
+
+        
+    
+    
+            marker_2f7244a436834a2d95e50ad952ceaf0d.bindTooltip(
+                `<div>
+                         <b>Bexar County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_785bda882f144429ae923670206ae442 = L.marker(
+                [31.695, -106.2995],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_911c5b5c282f4b8e86ca6876bcf48331 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7153c78b44d043c181eaa8aaca66d084 = $(`<div id="html_7153c78b44d043c181eaa8aaca66d084" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>El Paso County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>2265.0</td>         <td>58.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_911c5b5c282f4b8e86ca6876bcf48331.setContent(html_7153c78b44d043c181eaa8aaca66d084);
+        
+
+        marker_785bda882f144429ae923670206ae442.bindPopup(popup_911c5b5c282f4b8e86ca6876bcf48331)
+        ;
+
+        
+    
+    
+            marker_785bda882f144429ae923670206ae442.bindTooltip(
+                `<div>
+                         <b>El Paso County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9eda080bca4c457a80de466a20db6635 = L.marker(
+                [35.4015, -101.895],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_b09f8091975a4b41b22dfeef610422a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_854b82e0e5214df4b2cfff05aac88258 = $(`<div id="html_854b82e0e5214df4b2cfff05aac88258" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Potter County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>2238.0</td>         <td>26.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_b09f8091975a4b41b22dfeef610422a3.setContent(html_854b82e0e5214df4b2cfff05aac88258);
+        
+
+        marker_9eda080bca4c457a80de466a20db6635.bindPopup(popup_b09f8091975a4b41b22dfeef610422a3)
+        ;
+
+        
+    
+    
+            marker_9eda080bca4c457a80de466a20db6635.bindTooltip(
+                `<div>
+                         <b>Potter County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b416b01edc24a81bf0ee5c200041a90 = L.marker(
+                [29.5255, -95.7565],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_ff8ef847e4d747ac90922265ec03523d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_809a6be8fca24e00b54603204f1343f9 = $(`<div id="html_809a6be8fca24e00b54603204f1343f9" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Fort Bend County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>1676.0</td>         <td>41.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_ff8ef847e4d747ac90922265ec03523d.setContent(html_809a6be8fca24e00b54603204f1343f9);
+        
+
+        marker_3b416b01edc24a81bf0ee5c200041a90.bindPopup(popup_ff8ef847e4d747ac90922265ec03523d)
+        ;
+
+        
+    
+    
+            marker_3b416b01edc24a81bf0ee5c200041a90.bindTooltip(
+                `<div>
+                         <b>Fort Bend County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aca0f8c906a0463a859ad9b6ab80b57c = L.marker(
+                [33.209, -97.116],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_0c1603e641864dd9b3b24a1e40cfd9d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_37030fb8033a460f91e1af4cca812525 = $(`<div id="html_37030fb8033a460f91e1af4cca812525" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Denton County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>1212.0</td>         <td>30.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_0c1603e641864dd9b3b24a1e40cfd9d5.setContent(html_37030fb8033a460f91e1af4cca812525);
+        
+
+        marker_aca0f8c906a0463a859ad9b6ab80b57c.bindPopup(popup_0c1603e641864dd9b3b24a1e40cfd9d5)
+        ;
+
+        
+    
+    
+            marker_aca0f8c906a0463a859ad9b6ab80b57c.bindTooltip(
+                `<div>
+                         <b>Denton County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b7675ec44db14d64930a5f473575b198 = L.marker(
+                [33.1935, -96.5695],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_e014f1e92c9440ae86fc971b45bbc64f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_706f211de2f747e786d2b5b6e1952e1e = $(`<div id="html_706f211de2f747e786d2b5b6e1952e1e" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Collin County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>1138.0</td>         <td>33.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_e014f1e92c9440ae86fc971b45bbc64f.setContent(html_706f211de2f747e786d2b5b6e1952e1e);
+        
+
+        marker_b7675ec44db14d64930a5f473575b198.bindPopup(popup_e014f1e92c9440ae86fc971b45bbc64f)
+        ;
+
+        
+    
+    
+            marker_b7675ec44db14d64930a5f473575b198.bindTooltip(
+                `<div>
+                         <b>Collin County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a69945bac5a34284a5a423730867c644 = L.marker(
+                [30.329, -95.4635],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_58576de3d2c943f5aa60d614ddd7650d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90d69c8d372741c7a8c9404b28fdc259 = $(`<div id="html_90d69c8d372741c7a8c9404b28fdc259" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Montgomery County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>888.0</td>         <td>23.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_58576de3d2c943f5aa60d614ddd7650d.setContent(html_90d69c8d372741c7a8c9404b28fdc259);
+        
+
+        marker_a69945bac5a34284a5a423730867c644.bindPopup(popup_58576de3d2c943f5aa60d614ddd7650d)
+        ;
+
+        
+    
+    
+            marker_a69945bac5a34284a5a423730867c644.bindTooltip(
+                `<div>
+                         <b>Montgomery County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e5f04d37feb447e786eb44634fc3ec9a = L.marker(
+                [29.2125, -95.4665],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_9db672b311ab4018a46f8ea1334a0612 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_def57968075d4bd5a27cae0b37aadf2f = $(`<div id="html_def57968075d4bd5a27cae0b37aadf2f" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Brazoria County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>835.0</td>         <td>12.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_9db672b311ab4018a46f8ea1334a0612.setContent(html_def57968075d4bd5a27cae0b37aadf2f);
+        
+
+        marker_e5f04d37feb447e786eb44634fc3ec9a.bindPopup(popup_9db672b311ab4018a46f8ea1334a0612)
+        ;
+
+        
+    
+    
+            marker_e5f04d37feb447e786eb44634fc3ec9a.bindTooltip(
+                `<div>
+                         <b>Brazoria County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_73d5997597d44e34873110bf05fad14c = L.marker(
+                [29.338, -94.802],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_cc80a59b744a47b9a35767166c39874e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b5b67f6588049868074026e04dffcd5 = $(`<div id="html_8b5b67f6588049868074026e04dffcd5" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Galveston County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>749.0</td>         <td>32.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_cc80a59b744a47b9a35767166c39874e.setContent(html_8b5b67f6588049868074026e04dffcd5);
+        
+
+        marker_73d5997597d44e34873110bf05fad14c.bindPopup(popup_cc80a59b744a47b9a35767166c39874e)
+        ;
+
+        
+    
+    
+            marker_73d5997597d44e34873110bf05fad14c.bindTooltip(
+                `<div>
+                         <b>Galveston County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_204eef7f1eec4f92a172bd114d40ea52 = L.marker(
+                [26.1245, -97.507],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_dbc4cf5cf6cf4d70b5ab02f85659eee4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d3cfa7bfdcdc4c6891cee26ef263e69f = $(`<div id="html_d3cfa7bfdcdc4c6891cee26ef263e69f" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Cameron County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>686.0</td>         <td>32.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_dbc4cf5cf6cf4d70b5ab02f85659eee4.setContent(html_d3cfa7bfdcdc4c6891cee26ef263e69f);
+        
+
+        marker_204eef7f1eec4f92a172bd114d40ea52.bindPopup(popup_dbc4cf5cf6cf4d70b5ab02f85659eee4)
+        ;
+
+        
+    
+    
+            marker_204eef7f1eec4f92a172bd114d40ea52.bindTooltip(
+                `<div>
+                         <b>Cameron County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f81252e2b1a4ae2856f2a0208449566 = L.marker(
+                [33.61, -101.8215],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_34938b967d5a460c813d6784f658851d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18b4c96e1cb945a6868402e313f8a319 = $(`<div id="html_18b4c96e1cb945a6868402e313f8a319" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Lubbock County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>662.0</td>         <td>50.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_34938b967d5a460c813d6784f658851d.setContent(html_18b4c96e1cb945a6868402e313f8a319);
+        
+
+        marker_8f81252e2b1a4ae2856f2a0208449566.bindPopup(popup_34938b967d5a460c813d6784f658851d)
+        ;
+
+        
+    
+    
+            marker_8f81252e2b1a4ae2856f2a0208449566.bindTooltip(
+                `<div>
+                         <b>Lubbock County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_60f17497b9b548ee822664c661bfd148 = L.marker(
+                [34.965, -101.896],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_d0f1f02c50d943fbb2db2e6724ef063c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d9e97bed34824d44aa00ceb41b74e30c = $(`<div id="html_d9e97bed34824d44aa00ceb41b74e30c" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Randall County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>648.0</td>         <td>6.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_d0f1f02c50d943fbb2db2e6724ef063c.setContent(html_d9e97bed34824d44aa00ceb41b74e30c);
+        
+
+        marker_60f17497b9b548ee822664c661bfd148.bindPopup(popup_d0f1f02c50d943fbb2db2e6724ef063c)
+        ;
+
+        
+    
+    
+            marker_60f17497b9b548ee822664c661bfd148.bindTooltip(
+                `<div>
+                         <b>Randall County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f8034ba410aa4c13980aec649a3c6e18 = L.marker(
+                [35.8375, -101.89299999999999],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_b4cc25bb373545a49a56f7be91420538 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c1b11d34c2e6467d96458ec2c94207e6 = $(`<div id="html_c1b11d34c2e6467d96458ec2c94207e6" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Moore County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>579.0</td>         <td>13.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_b4cc25bb373545a49a56f7be91420538.setContent(html_c1b11d34c2e6467d96458ec2c94207e6);
+        
+
+        marker_f8034ba410aa4c13980aec649a3c6e18.bindPopup(popup_b4cc25bb373545a49a56f7be91420538)
+        ;
+
+        
+    
+    
+            marker_f8034ba410aa4c13980aec649a3c6e18.bindTooltip(
+                `<div>
+                         <b>Moore County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8fd688a4b4864802aa244aaf6d060d7d = L.marker(
+                [30.6545, -97.6025],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_06e9a7854e314063a1536a99306be414 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e77cb2198c4e4ece99a292af041b03bb = $(`<div id="html_e77cb2198c4e4ece99a292af041b03bb" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Williamson County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>541.0</td>         <td>21.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_06e9a7854e314063a1536a99306be414.setContent(html_e77cb2198c4e4ece99a292af041b03bb);
+        
+
+        marker_8fd688a4b4864802aa244aaf6d060d7d.bindPopup(popup_06e9a7854e314063a1536a99306be414)
+        ;
+
+        
+    
+    
+            marker_8fd688a4b4864802aa244aaf6d060d7d.bindTooltip(
+                `<div>
+                         <b>Williamson County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3fd031748b054dcf9160337a777aab7b = L.marker(
+                [27.7325, -99.505],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_10e79d3345884c1597d9029f1c374675 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe02dac172ac4ddd8bdb0197185b66db = $(`<div id="html_fe02dac172ac4ddd8bdb0197185b66db" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Webb County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>502.0</td>         <td>18.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_10e79d3345884c1597d9029f1c374675.setContent(html_fe02dac172ac4ddd8bdb0197185b66db);
+        
+
+        marker_3fd031748b054dcf9160337a777aab7b.bindPopup(popup_10e79d3345884c1597d9029f1c374675)
+        ;
+
+        
+    
+    
+            marker_3fd031748b054dcf9160337a777aab7b.bindTooltip(
+                `<div>
+                         <b>Webb County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c03168b313994fde827c25b938926eea = L.marker(
+                [26.412, -98.2245],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_e8a1109bd3be40c8bf1b2a525d74118a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed9d07f43cee4f2a91f1751ae5bd5b1d = $(`<div id="html_ed9d07f43cee4f2a91f1751ae5bd5b1d" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Hidalgo County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>482.0</td>         <td>10.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_e8a1109bd3be40c8bf1b2a525d74118a.setContent(html_ed9d07f43cee4f2a91f1751ae5bd5b1d);
+        
+
+        marker_c03168b313994fde827c25b938926eea.bindPopup(popup_e8a1109bd3be40c8bf1b2a525d74118a)
+        ;
+
+        
+    
+    
+            marker_c03168b313994fde827c25b938926eea.bindTooltip(
+                `<div>
+                         <b>Hidalgo County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0d72cc32457e47ba99ecff8178efdebc = L.marker(
+                [29.875, -94.1415],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_a4131b6623d64fb1b4d910a9bb8b4729 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b7a8edebaef4fa6a79f13ae6cc68489 = $(`<div id="html_7b7a8edebaef4fa6a79f13ae6cc68489" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Jefferson County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>478.0</td>         <td>27.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_a4131b6623d64fb1b4d910a9bb8b4729.setContent(html_7b7a8edebaef4fa6a79f13ae6cc68489);
+        
+
+        marker_0d72cc32457e47ba99ecff8178efdebc.bindPopup(popup_a4131b6623d64fb1b4d910a9bb8b4729)
+        ;
+
+        
+    
+    
+            marker_0d72cc32457e47ba99ecff8178efdebc.bindTooltip(
+                `<div>
+                         <b>Jefferson County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_42de3e61fa824fb3aa8777803c8312aa = L.marker(
+                [30.781, -95.595],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_36b270374c494b708dbfde68f0b07915 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2ba6087e604b485db2bc31d24c869f49 = $(`<div id="html_2ba6087e604b485db2bc31d24c869f49" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Walker County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>462.0</td>         <td>27.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_36b270374c494b708dbfde68f0b07915.setContent(html_2ba6087e604b485db2bc31d24c869f49);
+        
+
+        marker_42de3e61fa824fb3aa8777803c8312aa.bindPopup(popup_36b270374c494b708dbfde68f0b07915)
+        ;
+
+        
+    
+    
+            marker_42de3e61fa824fb3aa8777803c8312aa.bindTooltip(
+                `<div>
+                         <b>Walker County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_626c113260c1446a8e6fa47b1b8d6bb5 = L.marker(
+                [30.651999999999997, -96.341],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_073d158025d14f17b2147d829ab7c592 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_43cde234c81d4b5893bf24411ec9fc1a = $(`<div id="html_43cde234c81d4b5893bf24411ec9fc1a" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Brazos County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>436.0</td>         <td>19.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_073d158025d14f17b2147d829ab7c592.setContent(html_43cde234c81d4b5893bf24411ec9fc1a);
+        
+
+        marker_626c113260c1446a8e6fa47b1b8d6bb5.bindPopup(popup_073d158025d14f17b2147d829ab7c592)
+        ;
+
+        
+    
+    
+            marker_626c113260c1446a8e6fa47b1b8d6bb5.bindTooltip(
+                `<div>
+                         <b>Brazos County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1d7cc9d5f3cd4108b627a5ee49743469 = L.marker(
+                [32.30200000000001, -99.891],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_d841f448e3d34e0fb54ee20d175658c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0cbcd8596a54fbdb32f1be44d658b6a = $(`<div id="html_b0cbcd8596a54fbdb32f1be44d658b6a" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Taylor County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>322.0</td>         <td>5.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_d841f448e3d34e0fb54ee20d175658c4.setContent(html_b0cbcd8596a54fbdb32f1be44d658b6a);
+        
+
+        marker_1d7cc9d5f3cd4108b627a5ee49743469.bindPopup(popup_d841f448e3d34e0fb54ee20d175658c4)
+        ;
+
+        
+    
+    
+            marker_1d7cc9d5f3cd4108b627a5ee49743469.bindTooltip(
+                `<div>
+                         <b>Taylor County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8d1849ffa4ce43f8aa14ea25112fcb05 = L.marker(
+                [31.035999999999998, -97.492],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_fe6aedf7734b4ee0ab720f712abe90b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52752db9968942efbf1ee9f342928fd7 = $(`<div id="html_52752db9968942efbf1ee9f342928fd7" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Bell County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>298.0</td>         <td>3.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_fe6aedf7734b4ee0ab720f712abe90b0.setContent(html_52752db9968942efbf1ee9f342928fd7);
+        
+
+        marker_8d1849ffa4ce43f8aa14ea25112fcb05.bindPopup(popup_fe6aedf7734b4ee0ab720f712abe90b0)
+        ;
+
+        
+    
+    
+            marker_8d1849ffa4ce43f8aa14ea25112fcb05.bindTooltip(
+                `<div>
+                         <b>Bell County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b75964e42be4643a00afdd4db611993 = L.marker(
+                [33.679, -96.662],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_a605e8de075b4c9dbb09069ae5c9c977 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_369be728347e4c87a65e1108691ead8c = $(`<div id="html_369be728347e4c87a65e1108691ead8c" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Grayson County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>287.0</td>         <td>2.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_a605e8de075b4c9dbb09069ae5c9c977.setContent(html_369be728347e4c87a65e1108691ead8c);
+        
+
+        marker_5b75964e42be4643a00afdd4db611993.bindPopup(popup_a605e8de075b4c9dbb09069ae5c9c977)
+        ;
+
+        
+    
+    
+            marker_5b75964e42be4643a00afdd4db611993.bindTooltip(
+                `<div>
+                         <b>Grayson County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_140cad3f27ab4cd0867747e461d844db = L.marker(
+                [32.3005, -96.735],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_14d8f02f2bf84fd587d3bed965cf1bb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57d474c3ae974483bf378ecd63740c39 = $(`<div id="html_57d474c3ae974483bf378ecd63740c39" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Ellis County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>272.0</td>         <td>12.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_14d8f02f2bf84fd587d3bed965cf1bb1.setContent(html_57d474c3ae974483bf378ecd63740c39);
+        
+
+        marker_140cad3f27ab4cd0867747e461d844db.bindPopup(popup_14d8f02f2bf84fd587d3bed965cf1bb1)
+        ;
+
+        
+    
+    
+            marker_140cad3f27ab4cd0867747e461d844db.bindTooltip(
+                `<div>
+                         <b>Ellis County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8bb2dcdd9e8b40de805184e39c240f15 = L.marker(
+                [33.1905, -94.9675],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_e650fa39532348dcaa28a060722869a8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6fbb00e41b774d599588f957e5536836 = $(`<div id="html_6fbb00e41b774d599588f957e5536836" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Titus County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>272.0</td>         <td>2.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_e650fa39532348dcaa28a060722869a8.setContent(html_6fbb00e41b774d599588f957e5536836);
+        
+
+        marker_8bb2dcdd9e8b40de805184e39c240f15.bindPopup(popup_e650fa39532348dcaa28a060722869a8)
+        ;
+
+        
+    
+    
+            marker_8bb2dcdd9e8b40de805184e39c240f15.bindTooltip(
+                `<div>
+                         <b>Titus County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d20394d14e96453e922dbb4ca09194d0 = L.marker(
+                [30.054, -98.004],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_abd8dce185dc4966a22b4de33a513aa6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3258598f94a94dc3926c358680a1247e = $(`<div id="html_3258598f94a94dc3926c358680a1247e" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Hays County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>270.0</td>         <td>3.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_abd8dce185dc4966a22b4de33a513aa6.setContent(html_3258598f94a94dc3926c358680a1247e);
+        
+
+        marker_d20394d14e96453e922dbb4ca09194d0.bindPopup(popup_abd8dce185dc4966a22b4de33a513aa6)
+        ;
+
+        
+    
+    
+            marker_d20394d14e96453e922dbb4ca09194d0.bindTooltip(
+                `<div>
+                         <b>Hays County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_835ff8246e9e4bfda6830b78a426ae5b = L.marker(
+                [27.776999999999997, -97.493],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_c7cd8251aff1498ba8febf1f9a36cf83 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6346768e28fe40ddb8312b9abc4c0adb = $(`<div id="html_6346768e28fe40ddb8312b9abc4c0adb" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Nueces County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>262.0</td>         <td>3.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_c7cd8251aff1498ba8febf1f9a36cf83.setContent(html_6346768e28fe40ddb8312b9abc4c0adb);
+        
+
+        marker_835ff8246e9e4bfda6830b78a426ae5b.bindPopup(popup_c7cd8251aff1498ba8febf1f9a36cf83)
+        ;
+
+        
+    
+    
+            marker_835ff8246e9e4bfda6830b78a426ae5b.bindTooltip(
+                `<div>
+                         <b>Nueces County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_31f378b070dd4b948cf05035bd97198a = L.marker(
+                [31.5355, -94.6395],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_51a6d013930444629a40b38526177b30 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8497575c5a9540868b2da23485de7f10 = $(`<div id="html_8497575c5a9540868b2da23485de7f10" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Nacogdoches County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>255.0</td>         <td>17.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_51a6d013930444629a40b38526177b30.setContent(html_8497575c5a9540868b2da23485de7f10);
+        
+
+        marker_31f378b070dd4b948cf05035bd97198a.bindPopup(popup_51a6d013930444629a40b38526177b30)
+        ;
+
+        
+    
+    
+            marker_31f378b070dd4b948cf05035bd97198a.bindTooltip(
+                `<div>
+                         <b>Nacogdoches County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1559dc310b3a4356bfb31f1324f3f44f = L.marker(
+                [32.56, -94.3725],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_4ff9ea1ab32f4f38a625e416941cb5df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b97380cb257748ce940452a357672e32 = $(`<div id="html_b97380cb257748ce940452a357672e32" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Harrison County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>230.0</td>         <td>23.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_4ff9ea1ab32f4f38a625e416941cb5df.setContent(html_b97380cb257748ce940452a357672e32);
+        
+
+        marker_1559dc310b3a4356bfb31f1324f3f44f.bindPopup(popup_4ff9ea1ab32f4f38a625e416941cb5df)
+        ;
+
+        
+    
+    
+            marker_1559dc310b3a4356bfb31f1324f3f44f.bindTooltip(
+                `<div>
+                         <b>Harrison County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_418467c4ce1647678f0a9ecdb54529c7 = L.marker(
+                [31.39, -97.7995],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_a0133f77fde24879bf1a60bba8cc5013 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9979fa4928334ac782b0e3a197b3a550 = $(`<div id="html_9979fa4928334ac782b0e3a197b3a550" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Coryell County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>226.0</td>         <td>2.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_a0133f77fde24879bf1a60bba8cc5013.setContent(html_9979fa4928334ac782b0e3a197b3a550);
+        
+
+        marker_418467c4ce1647678f0a9ecdb54529c7.bindPopup(popup_a0133f77fde24879bf1a60bba8cc5013)
+        ;
+
+        
+    
+    
+            marker_418467c4ce1647678f0a9ecdb54529c7.bindTooltip(
+                `<div>
+                         <b>Coryell County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_27d7d767981d4a71be2b015c65ba5e84 = L.marker(
+                [32.411500000000004, -95.29],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_9769f53bd0514b62a46b0576fcd5466c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_715b01e3044d4ce0a8b97513c600fe82 = $(`<div id="html_715b01e3044d4ce0a8b97513c600fe82" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Smith County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>198.0</td>         <td>4.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_9769f53bd0514b62a46b0576fcd5466c.setContent(html_715b01e3044d4ce0a8b97513c600fe82);
+        
+
+        marker_27d7d767981d4a71be2b015c65ba5e84.bindPopup(popup_9769f53bd0514b62a46b0576fcd5466c)
+        ;
+
+        
+    
+    
+            marker_27d7d767981d4a71be2b015c65ba5e84.bindTooltip(
+                `<div>
+                         <b>Smith County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4c4ea6be480049498168759155c86120 = L.marker(
+                [30.221999999999998, -96.44],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_cd2b67c998fc4d1c920078f15c8e72dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_16ffaf62831544e89123fc659e79cf17 = $(`<div id="html_16ffaf62831544e89123fc659e79cf17" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Washington County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>193.0</td>         <td>23.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_cd2b67c998fc4d1c920078f15c8e72dc.setContent(html_16ffaf62831544e89123fc659e79cf17);
+        
+
+        marker_4c4ea6be480049498168759155c86120.bindPopup(popup_cd2b67c998fc4d1c920078f15c8e72dc)
+        ;
+
+        
+    
+    
+            marker_4c4ea6be480049498168759155c86120.bindTooltip(
+                `<div>
+                         <b>Washington County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fa0236dd6f5a4b2a89ed960d1abec037 = L.marker(
+                [32.514, -94.783],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_cfdaed16a8534677bf5562745319e382 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9a092afdb304790b454a335645fc1af = $(`<div id="html_f9a092afdb304790b454a335645fc1af" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Gregg County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>187.0</td>         <td>4.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_cfdaed16a8534677bf5562745319e382.setContent(html_f9a092afdb304790b454a335645fc1af);
+        
+
+        marker_fa0236dd6f5a4b2a89ed960d1abec037.bindPopup(popup_cfdaed16a8534677bf5562745319e382)
+        ;
+
+        
+    
+    
+            marker_fa0236dd6f5a4b2a89ed960d1abec037.bindTooltip(
+                `<div>
+                         <b>Gregg County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f411d15ca7c8441486cc765d02cfdff9 = L.marker(
+                [31.7755, -94.1565],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_40fea1799c184952a0331ad45203042c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a20a8d9f4e3047eeae105cf1856ea5e6 = $(`<div id="html_a20a8d9f4e3047eeae105cf1856ea5e6" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Shelby County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>183.0</td>         <td>6.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_40fea1799c184952a0331ad45203042c.setContent(html_a20a8d9f4e3047eeae105cf1856ea5e6);
+        
+
+        marker_f411d15ca7c8441486cc765d02cfdff9.bindPopup(popup_40fea1799c184952a0331ad45203042c)
+        ;
+
+        
+    
+    
+            marker_f411d15ca7c8441486cc765d02cfdff9.bindTooltip(
+                `<div>
+                         <b>Shelby County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b32110408d5a44b09fa1eef6deeb6deb = L.marker(
+                [32.5985, -96.303],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_5d2e0cde9ef4481da88158c85938dc00 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c1f441f042c4633b99e233bffd92e65 = $(`<div id="html_1c1f441f042c4633b99e233bffd92e65" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Kaufman County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>182.0</td>         <td>2.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_5d2e0cde9ef4481da88158c85938dc00.setContent(html_1c1f441f042c4633b99e233bffd92e65);
+        
+
+        marker_b32110408d5a44b09fa1eef6deeb6deb.bindPopup(popup_5d2e0cde9ef4481da88158c85938dc00)
+        ;
+
+        
+    
+    
+            marker_b32110408d5a44b09fa1eef6deeb6deb.bindTooltip(
+                `<div>
+                         <b>Kaufman County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_027d376fae01429aa776e9178d2f587a = L.marker(
+                [33.4745, -94.395],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_e2dff1edf96f4624a197069d9a20dd31 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_842be5fbac46439ab4cfb1361f3ac364 = $(`<div id="html_842be5fbac46439ab4cfb1361f3ac364" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Bowie County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>176.0</td>         <td>11.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_e2dff1edf96f4624a197069d9a20dd31.setContent(html_842be5fbac46439ab4cfb1361f3ac364);
+        
+
+        marker_027d376fae01429aa776e9178d2f587a.bindPopup(popup_e2dff1edf96f4624a197069d9a20dd31)
+        ;
+
+        
+    
+    
+            marker_027d376fae01429aa776e9178d2f587a.bindTooltip(
+                `<div>
+                         <b>Bowie County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_caf5d97949174d589e175d1cc4d51966 = L.marker(
+                [31.2765, -94.568],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_0d4907cf59024d51932fe4f300beca9d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a08bf205707c4e18a5df7ca150af949c = $(`<div id="html_a08bf205707c4e18a5df7ca150af949c" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Angelina County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>175.0</td>         <td>2.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_0d4907cf59024d51932fe4f300beca9d.setContent(html_a08bf205707c4e18a5df7ca150af949c);
+        
+
+        marker_caf5d97949174d589e175d1cc4d51966.bindPopup(popup_0d4907cf59024d51932fe4f300beca9d)
+        ;
+
+        
+    
+    
+            marker_caf5d97949174d589e175d1cc4d51966.bindTooltip(
+                `<div>
+                         <b>Angelina County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_685cf22012c448d280310f200cb09038 = L.marker(
+                [32.3445, -97.3515],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_8c461e34eb024e2ea4b84e1c9ff76269 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f783451709e6419fbdc2df82433ff580 = $(`<div id="html_f783451709e6419fbdc2df82433ff580" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Johnson County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>173.0</td>         <td>4.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_8c461e34eb024e2ea4b84e1c9ff76269.setContent(html_f783451709e6419fbdc2df82433ff580);
+        
+
+        marker_685cf22012c448d280310f200cb09038.bindPopup(popup_8c461e34eb024e2ea4b84e1c9ff76269)
+        ;
+
+        
+    
+    
+            marker_685cf22012c448d280310f200cb09038.bindTooltip(
+                `<div>
+                         <b>Johnson County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e0964e86326449f69fc6a9a0e0dca7ba = L.marker(
+                [30.1035, -97.3365],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_70870ce21e004835ba0f31bf8641c085 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56968d69de204fb0aa25cc0bcc7b6e6c = $(`<div id="html_56968d69de204fb0aa25cc0bcc7b6e6c" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Bastrop County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>173.0</td>         <td>2.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_70870ce21e004835ba0f31bf8641c085.setContent(html_56968d69de204fb0aa25cc0bcc7b6e6c);
+        
+
+        marker_e0964e86326449f69fc6a9a0e0dca7ba.bindPopup(popup_70870ce21e004835ba0f31bf8641c085)
+        ;
+
+        
+    
+    
+            marker_e0964e86326449f69fc6a9a0e0dca7ba.bindTooltip(
+                `<div>
+                         <b>Bastrop County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_caad01d58a0d4c46ac49efde3a171d80 = L.marker(
+                [32.183499999999995, -94.3075],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_8681cf59ce6d46eea10527c96b77d3be = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0cc842fde2bd4839a34ae648b8e0dfb7 = $(`<div id="html_0cc842fde2bd4839a34ae648b8e0dfb7" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Panola County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>166.0</td>         <td>20.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_8681cf59ce6d46eea10527c96b77d3be.setContent(html_0cc842fde2bd4839a34ae648b8e0dfb7);
+        
+
+        marker_caad01d58a0d4c46ac49efde3a171d80.bindPopup(popup_8681cf59ce6d46eea10527c96b77d3be)
+        ;
+
+        
+    
+    
+            marker_caad01d58a0d4c46ac49efde3a171d80.bindTooltip(
+                `<div>
+                         <b>Panola County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_147430a3ecb843ec824ca345c8da690c = L.marker(
+                [34.965, -102.605],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_d03aa1643a9c43ed85739320e73a3405 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a06411ecd3f4efc8fc6aa53eb8c573f = $(`<div id="html_7a06411ecd3f4efc8fc6aa53eb8c573f" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Deaf Smith County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>157.0</td>         <td>12.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_d03aa1643a9c43ed85739320e73a3405.setContent(html_7a06411ecd3f4efc8fc6aa53eb8c573f);
+        
+
+        marker_147430a3ecb843ec824ca345c8da690c.bindPopup(popup_d03aa1643a9c43ed85739320e73a3405)
+        ;
+
+        
+    
+    
+            marker_147430a3ecb843ec824ca345c8da690c.bindTooltip(
+                `<div>
+                         <b>Deaf Smith County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_533719a32b5e4e1d86bf742e8a158b25 = L.marker(
+                [28.795, -96.9745],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_82b5aa34b26d41b89eb87630432d70e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5deec4caaa294321a28cc9fa22eac151 = $(`<div id="html_5deec4caaa294321a28cc9fa22eac151" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Victoria County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>157.0</td>         <td>7.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_82b5aa34b26d41b89eb87630432d70e9.setContent(html_5deec4caaa294321a28cc9fa22eac151);
+        
+
+        marker_533719a32b5e4e1d86bf742e8a158b25.bindPopup(popup_82b5aa34b26d41b89eb87630432d70e9)
+        ;
+
+        
+    
+    
+            marker_533719a32b5e4e1d86bf742e8a158b25.bindTooltip(
+                `<div>
+                         <b>Victoria County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bd877c17cea042329ac4c4b0d6a544ad = L.marker(
+                [32.898, -96.40799999999999],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_e0689ee937dc4e7dac827e45a849ff30 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c257f84a1acf43e0a18ec7d8bd4b7cd7 = $(`<div id="html_c257f84a1acf43e0a18ec7d8bd4b7cd7" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Rockwall County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>151.0</td>         <td>10.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_e0689ee937dc4e7dac827e45a849ff30.setContent(html_c257f84a1acf43e0a18ec7d8bd4b7cd7);
+        
+
+        marker_bd877c17cea042329ac4c4b0d6a544ad.bindPopup(popup_e0689ee937dc4e7dac827e45a849ff30)
+        ;
+
+        
+    
+    
+            marker_bd877c17cea042329ac4c4b0d6a544ad.bindTooltip(
+                `<div>
+                         <b>Rockwall County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1fdb3255f1294f9baae9c3cd537c09c9 = L.marker(
+                [31.869, -102.54299999999999],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_c345236d91114eac9c323d3a29146410 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_335794d9d03b49de868aaa3ee4d837a2 = $(`<div id="html_335794d9d03b49de868aaa3ee4d837a2" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Ector County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>147.0</td>         <td>4.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_c345236d91114eac9c323d3a29146410.setContent(html_335794d9d03b49de868aaa3ee4d837a2);
+        
+
+        marker_1fdb3255f1294f9baae9c3cd537c09c9.bindPopup(popup_c345236d91114eac9c323d3a29146410)
+        ;
+
+        
+    
+    
+            marker_1fdb3255f1294f9baae9c3cd537c09c9.bindTooltip(
+                `<div>
+                         <b>Ector County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_02f6a41802ca437684736b80dedbd8fe = L.marker(
+                [30.311999999999998, -94.4025],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_6dfc4c4051c1400e9813f57d845038c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e50238c5c8b43e8b0b3c60a18baeb8c = $(`<div id="html_1e50238c5c8b43e8b0b3c60a18baeb8c" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Hardin County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>136.0</td>         <td>5.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_6dfc4c4051c1400e9813f57d845038c3.setContent(html_1e50238c5c8b43e8b0b3c60a18baeb8c);
+        
+
+        marker_02f6a41802ca437684736b80dedbd8fe.bindPopup(popup_6dfc4c4051c1400e9813f57d845038c3)
+        ;
+
+        
+    
+    
+            marker_02f6a41802ca437684736b80dedbd8fe.bindTooltip(
+                `<div>
+                         <b>Hardin County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1d421c2b482a4d9ba4725519fff18a88 = L.marker(
+                [32.7375, -99.8795],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_4ea737f627de40daa6796966a3967ef5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ab752655b464514aa5ad24f735f00cc = $(`<div id="html_9ab752655b464514aa5ad24f735f00cc" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Jones County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>135.0</td>         <td>0.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_4ea737f627de40daa6796966a3967ef5.setContent(html_9ab752655b464514aa5ad24f735f00cc);
+        
+
+        marker_1d421c2b482a4d9ba4725519fff18a88.bindPopup(popup_4ea737f627de40daa6796966a3967ef5)
+        ;
+
+        
+    
+    
+            marker_1d421c2b482a4d9ba4725519fff18a88.bindTooltip(
+                `<div>
+                         <b>Jones County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_483fb7ea62864f7fab02928ff9322834 = L.marker(
+                [33.6575, -95.5835],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_2c49a983fc514f57a44c34c06ba7c278 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a39b844112514192b28bd4caa92dff92 = $(`<div id="html_a39b844112514192b28bd4caa92dff92" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Lamar County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>128.0</td>         <td>9.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_2c49a983fc514f57a44c34c06ba7c278.setContent(html_a39b844112514192b28bd4caa92dff92);
+        
+
+        marker_483fb7ea62864f7fab02928ff9322834.bindPopup(popup_2c49a983fc514f57a44c34c06ba7c278)
+        ;
+
+        
+    
+    
+            marker_483fb7ea62864f7fab02928ff9322834.bindTooltip(
+                `<div>
+                         <b>Lamar County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_580d73052d7c468c906f0703d030aaf6 = L.marker(
+                [31.869, -102.0315],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_22336c2c5dce4c52aaa1c4149d144e00 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8269120f8b4d4ed8b5f53fa625f75c5a = $(`<div id="html_8269120f8b4d4ed8b5f53fa625f75c5a" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Midland County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>124.0</td>         <td>12.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_22336c2c5dce4c52aaa1c4149d144e00.setContent(html_8269120f8b4d4ed8b5f53fa625f75c5a);
+        
+
+        marker_580d73052d7c468c906f0703d030aaf6.bindPopup(popup_22336c2c5dce4c52aaa1c4149d144e00)
+        ;
+
+        
+    
+    
+            marker_580d73052d7c468c906f0703d030aaf6.bindTooltip(
+                `<div>
+                         <b>Midland County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1ad06a13f7f3476183a12b1a0d54c0e3 = L.marker(
+                [29.612, -97.972],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_eeb0c57ce0fd4d47b9d3f7aa6c0d702f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11ba0cc4128142c7a2595b99dd43a9e5 = $(`<div id="html_11ba0cc4128142c7a2595b99dd43a9e5" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>Guadalupe County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>122.0</td>         <td>0.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_eeb0c57ce0fd4d47b9d3f7aa6c0d702f.setContent(html_11ba0cc4128142c7a2595b99dd43a9e5);
+        
+
+        marker_1ad06a13f7f3476183a12b1a0d54c0e3.bindPopup(popup_eeb0c57ce0fd4d47b9d3f7aa6c0d702f)
+        ;
+
+        
+    
+    
+            marker_1ad06a13f7f3476183a12b1a0d54c0e3.bindTooltip(
+                `<div>
+                         <b>Guadalupe County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e7f9bf8834ec42968c37250c82fb3706 = L.marker(
+                [31.5535, -97.20299999999999],
+                {}
+            ).addTo(map_0057b26096864d549acae70df6baa096);
+        
+    
+        var popup_fdfc300d80504ea4b7db02b00b00ffae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5d20b252db7e4ff49ff423302632aaca = $(`<div id="html_5d20b252db7e4ff49ff423302632aaca" style="width: 100.0%; height: 100.0%;">    <style>         table, th, td {           border: 1px solid black;           padding: 2px;         }     </style>\      <table style="width:100%">         <h3><b>McLennan County, Texas, United States</b></h3>         <h5>At 05/25/20 @ 16:31 UTC</h5>         <h5>From https://coronadatascraper.com/ </h5>       <tr>         <th>Cases</th>         <th>Deaths</th>         <th>Data Source</th>       </tr>       <tr>         <td>107.0</td>         <td>4.0</td>         <td>https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv</td>       </tr>     </table>     </div>`)[0];
+            popup_fdfc300d80504ea4b7db02b00b00ffae.setContent(html_5d20b252db7e4ff49ff423302632aaca);
+        
+
+        marker_e7f9bf8834ec42968c37250c82fb3706.bindPopup(popup_fdfc300d80504ea4b7db02b00b00ffae)
+        ;
+
+        
+    
+    
+            marker_e7f9bf8834ec42968c37250c82fb3706.bindTooltip(
+                `<div>
+                         <b>McLennan County, Texas, United States - Over 100 Cases Today</b>
+    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+{%endblock%}

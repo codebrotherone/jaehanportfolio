@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .multiline {
+            white-space: pre-wrap;
+            font-family: "Fira Code", monospace;
+        }
+        .page-summary{
+            font-family: "Fira Code", monospace;
+            font-size: 17px;
+            background-color: #fdfdfd;
+            margin-top: 30px;
+            margin-left: 30px;
+            title: 24px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="page-summary">
+        <div class="multiline">
+        <h4><b>work</b></h4>
+        # typical routine for devs
+            while developer:
+                if unsure:
+                    research = check_google_and_stack_overflow()
+                    if not research:
+                        collaborate = ask_other_developers()
+                        return collaborate
+                else:
+                    code_stuff()
+
+            <h4 style="text-align: left; float: center">What most developers won't tell you; my journey as a developer. </h4>
+        First, take what I say with a grain of salt. Or don't. Either way, I hope my honesty helps other people who feel
+        lost in the world of software engineering, tech buzzwords, and AGILE methodologies.
+
+        Being a self-taught programmer, and someone who is generally curious about everything, I figured I should speak
+        on how I started, and tips that might help other developers.
+
+        Fun fact: I was the first in my family to learn how to use a computer, program, let alone actually graduate
+        college (end humble brag).
+
+
+        <h4><b>background</b></h4>
+
+            I graduated in Math at IU in 2016. Around that time I accepted a position as paid search analyst,
+        where I accepted a job at Crate and Barrel and learned that I knew nothing.
+
+            At the time, I could barely distinguish the difference between a jenkins, a server -- let alone what an API
+        was aside from the text book definition... Don't get me wrong I definitely put in work, and learned what I needed
+        to know to finish the job, but it would have been much easier had I known what it was I was actually doing.
+
+                                                <b>*pause for judgment*</b>
+
+        It's incredible how much of our knowledge is contextual. I mean I had learned these concepts in school and
+        online, but why was it so difficult to apply?
+
+        All I know, was that I knew what a server was from my days of cs 1.6 - when I wanted to go pro (never happened).
+        But I didn't know how to apply that context to a business environment. I grew up working at the family dollar store,
+        and the concept of tech debt, APIs, web servers, and legacy systems eluded me entirely.
+
+        So what did I do? I bugged the crap out of my IT Director. I constantly googled everything. It got to a point
+        where I would call my roommate (developer at the time) during my lunch break just to ask questions on Jenkins and
+        python (bless him for his patience).
+
+        You can bet I asked all the wrong questions consistently without fail, and over time I started building the
+        foundation I needed to solve problems on my own.
+
+        I applied for Georgia Tech's Online Masters' Program for Computer Science, got in, and finished about half the
+        credits before I realized that - this was nothing compared to the real life production experience I needed
+        for my resume. If I can't apply what I learn, why am I learning it?
+
+        This led me to move across the country to work for IBM SoftLayer, Charles Schwab, etc.. drastically shifting
+        my focus and desired roles towards data science (a passion of mine) and software development outside of the
+        context of paid search or marketing. I stopped being complacent doing what I know I could do as a developer,
+        and started chasing jobs and roles that were outside of my reach. I started attending data science conferences,
+        reading ArXIV articles (Geoff Hinton is my idol), and continued pulling threads because that's all I had at the
+        time.
+
+        The sheer volume of applications I put out during this time is insane. I think I averaged about 100 a week.
+        I mean I literally had notebooks filled with job summaries, dates, cover letters, and so many resume variants
+        that I couldn't keep track at times who was calling and what for...
+
+        I started learning new languages (I promise it gets easier) and really made a shift towards focusing on what I
+        enjoy, outside of simple job offers and 401k matches. I started chasing technologies, and big companies that
+        could provide me better opportunities to challenge myself and grow as a developer.
+
+            <b>Okay, chill jae, what about the catch 22? How can you get a job when you have no experience?</b>
+
+        I honestly don't know. I just know what that it's amazing what you can accomplish,
+        when you convince yourself that there is no other way out.
+
+        You can create experience, and it only takes 1 interviewer to believe in you - to start your career.
+        If you haven't convinced yourself you can do this, then who the hell would bother believing in you?
+
+        tl;dr
+            1. Everyone feels like they have imposter syndrome starting off.
+            2. Experience is contingent on your ability to improve over time.
+            3. Believe in yourself more so than others believe in you.
+
+        Enough ranting, here are some simple tips that helped me.
+        </div>
+
+        <div class="picture" style="text-align: center;">
+            <img src="{% static 'resume/imgs/swanson.gif' %}" style= "width: 50em; height:30em; padding:10px;" class="center" alt="Ron Swanson"  >
+        </div>
+
+        <div class="multiline">
+
+        <h4><b>advice</b></h4>
+
+        <b>1.) Tip # 1 - ASK THE RIGHT QUESTIONS</b>
+
+        You have to realize, that half the battle in finding a solution, is <b>asking the right question</b>...
+
+        If you are a developer, and completely deny using Google then I don't believe you. If you say that you never
+        copied code, I also don't believe you. I am not <b>advocating for people to steal or copy code</b>, I am just
+        saying that everyone starts somewhere, and it's arrogant to assume that the problem you are facing has never
+        been seen or studied before.
+
+                Good artists create, great artists steal - and software engineering is no different.
+
+        However, knowing what you are implementing vs. someone who just copies code and runs it is what separates you
+        from the flock. Do you understand what you've copied, or written? Are your fundamentals sound? Can you explain
+        the logic? Is this the best practice or a cop out?
+
+        <b>Tip # 2 - NOBODY WAS BORN WITH PRO SKILLS</b>
+
+        Grind, grind, and grind. If you're comfortable, move on. Nobody cares how good you are at pandas, they care
+        if you know how to leverage scripting languages to accomplish ETL tasks.
+
+        After I started getting comfortable, I quickly realized there was so much I didn't know. I had to learn,
+        and it had to be online. So I chose Georgia Tech OMSCS program to obtain a Masters (spoiler: halfway through).
+
+        It was during this time I started to forge a foundation in CS that I never had as a Math major. To be fair,
+        I have always had a self-starter attitude out of necessity and not choice. And that just comes from personal
+        life experiences, upbringing, and my individual beliefs.
+
+        But it is more than helpful for developers who are just starting their career.
+
+        If you don't know something, don't be passive. Act on it. Be consumed by that curiousity until you feel you have
+        the understanding you need, then move on. You don't need to be an expert in everything, but you always have the
+        right to become one.
+
+        <b>Tip # 3 - BE COMFORTABLE BEING UNCOMFORTABLE</b>
+
+        The more I learn, the more comfortable I am with being the dumbest person in the room. I love it. This is
+        what keeps me going in anything I pursue in life. Whenever I feel chummy, I know deep down inside I have to
+        make moves.
+
+            <i> Failure is not fatal, and success is not fatal; it is the courage to continue that counts - WC </i>>
+
+        I have failed so many times that it is literally impossible to count. I still remember people who said I would
+        never graduate college, or get a 6 figure job, or find a career that didn't involve working at the dollar store.
+
+                            *There is nothing I can't learn or accomplish, even when I'm wrong*
+
+        Development is brutal, and if you have been developing for a while you know exactly what this feels like.
+        Imagine spending years of your life learning a technology, only to see it become outdated and obsolete every few years.
+        If you are constantly pushing, and surrounded by smarter people - then it's very unlikely that you will pidgeonhole
+        yourself into technologies that will eventually lose adoption.
+
+        Just ask yourself, If Jordan can will himself to play with food poisoning in 97', then why can't I figure this
+        problem out? (if you haven't seen the last dance, then watch it NOW).
+        </div>
+
+        <div class="picture" style="text-align: center;">
+            <img src="{% static 'resume/imgs/jordan.jfif' %}" style= "width: 50em; height:30em; padding:10px;" class="center" alt="Jordan Flu"  >
+        </div>
+
+        <div class="multiline">
+        <h4><b>end rant</b></h4>
+        These three things have helped me progress rapidly in my career - from being a non-cs major to working at
+        IBM, Crate and Barrel, and Charles Schwab in less than 4 years. Getting to a 'senior' position in 5.
+        Working on projects I love, and constantly learning from smarter people.
+
+        Being told I didn't have the experience for certain roles, then turning around and doubling my salary in a
+        higher role at a better company.
+
+        Beyond development, these three tenets are what I strongly believe in. Regardless of where you land,
+        just make sure you keep on grinding.
+
+        Anyways, hope this helps. I'll end my rant here.
+
+        Everyone has their own idea of success in development, and what it takes to get there.
+
+        This is just my opinion. Cheers! Happy Coding!
+
+        </div>
+
+  <br>
+
+
+</div>
+
+</body>
+
+{%endblock%}

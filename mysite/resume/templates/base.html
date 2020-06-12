@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>jaehan.dev</title>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  </body>
+
+    </head>
+
+    <body>
+        <style>
+        img{
+            height: 80px;
+            width: auto;
+        }
+        body {
+            font-family: "Fira Code", monospace;
+            font-size: 17px;
+            background-color: #fdfdfd;
+        }
+        .shadow {
+            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #f00000;
+            border-color: #dc281e;
+        }
+        .masthead {
+            font-family: 'Fira Code', monospace;
+            background-position: center;
+            margin-top: 20px;
+            height: auto;
+            width: auto;
+<!--            padding-bottom: 15px;-->
+            box-shadow: 0 16px 48px #E3E7EB;
+            padding-top: 10px;
+        }
+        .text-light {
+            color: gray;
+        }
+
+    </style>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
+            <div class="container-fluid">
+                {% load static %}
+                <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'resume/imgs/jae_site_logo.png' %}" alt="Hi!" /></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                    <a class="navbar-brand" style="margin-left: 200px"></a>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item text-black">
+                            <a class="nav-link text-black " href="{% url 'gallery' %}">gallery</a>
+                        </li>
+                        <li class="nav-item text-black">
+                            <a class="nav-link text-black " href="{% url 'notebooks' %}">notebooks</a>
+                        </li>
+                        <li class="nav-item text-black">
+                            <a class="nav-link text-black " href="{% url 'projects' %}">projects</a>
+                        </li>
+                        <li class="nav-item text-black">
+                            <a class="nav-link text-black " href="{% url 'about' %}">about</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+
+
+    </body>
+</html>
